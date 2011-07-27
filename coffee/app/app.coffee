@@ -44,11 +44,11 @@ app.get '/', (req,res) ->
 require('./modules/sessions').setup app
 
 # Disallow non-iphone/ipod
-app.get /\/.*/, (req,res,next) ->
-    if req.headers['user-agent'].match /(iPhone|iPod)/
-        next()
-        return
-    res.render 'mobile_only'
+#app.get /\/.*/, (req,res,next) ->
+#    if req.headers['user-agent'].match /(iPhone|iPod)/
+#        next()
+#        return
+#    res.render 'mobile_only'
 
 # Access control for /courses - require login to add/edit
 publicCourseRoutes = [

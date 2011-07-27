@@ -26,4 +26,4 @@ exports.setup = (app) ->
     # End session and return to login form
     app.get '/sessions/destroy', (req,res) ->
         delete req.session.user
-        res.redirect '/sessions/new'
+        res.redirect '/'
