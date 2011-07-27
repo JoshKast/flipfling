@@ -1,5 +1,5 @@
 {
-    "name": "flip-fling",
+    "name": "flipfling",
     "description" : "Mobile webapp for tracking disc golf scores, made with CoffeeScript + Nodejs + MongoDB",
     "version": "0.0.1",
     "author": "Josh Kastelein <josh@bustedloop.com>",

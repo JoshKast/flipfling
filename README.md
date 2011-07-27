@@ -11,7 +11,7 @@ How to build:
 
 3) [Install coffee](http://jashkenas.github.com/coffee-script/#installation)
 
-4) [Install mongodb](http://www.mongodb.org/downloads)
+4) [Download mongodb](http://www.mongodb.org/downloads)
 
 5) Start mongo:
 
@@ -21,9 +21,9 @@ How to build:
 
 6) Create a user in mongo db:
 
-`~/Downloads/mongodb.../bin/mongo`
+`./bin/mongo`
 
-`> use flip-fling`
+`> use flipfling`
 
 `> u = {login:'foo',password:'bar',role:'admin'}`
 
