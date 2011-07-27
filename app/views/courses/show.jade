@@ -1,0 +1,7 @@
+h2= course.name
+p= course.description
+p Price: #{course.price}
+p
+  a(href='/courses') Back
+p
+  a(href='/courses/'+course._id.toHexString()+'/edit') Edit

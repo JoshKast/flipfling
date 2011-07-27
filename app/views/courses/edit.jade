@@ -1,0 +1,4 @@
+h1 Editing #{course.name}
+form(action='/courses/'+course._id.toHexString(), method='POST')
+  input(type='hidden',name='_method',value='put')
+  div!= partial('partials/course_form',{locals:{course:course}})

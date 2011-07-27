@@ -1,0 +1,15 @@
+{
+    "name": "flip-fling",
+    "description" : "Mobile webapp for tracking disc golf scores, made with CoffeeScript + Nodejs + MongoDB",
+    "version": "0.0.1",
+    "author": "Josh Kastelein <josh@bustedloop.com>",
+    "dependencies": {
+        "express": ">= 2.4.2",
+        "jade": ">= 0.12.4",
+        "express-resource": ">= 0.2.1",
+        "mongoose": ">= 1.6.0"
+    },
+    "keywords": ["mongoose","express-resource"],
+    "main": "coffeescript/app.coffee",
+    "engines": { "node": ">= 0.4.5" }
+}

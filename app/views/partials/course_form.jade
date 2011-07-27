@@ -1,0 +1,14 @@
+p
+  label(for='course_name') Name:
+p
+  input(type='text',id='course_name',name='course[name]',value=course.name)
+p
+  label(for='course_description') Description:
+p
+  textarea(id='course_description',name='course[description]')= course.description
+p
+  label(for='course_price') Price:
+p
+  input(type='text',id='course_price',name='course[price]',value=course.price)
+p
+  input(type='submit')

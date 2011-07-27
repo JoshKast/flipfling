@@ -1,0 +1,12 @@
+input(type='hidden',name='score[hole]',value=hole)
+input(type='hidden',name='score[shots]')
+h3 Hole &nbsp;
+  span=hole
+p
+  label(for='score_shots') Shots:
+  input(type='button',id='shots_2',value='2',class='shots birdie')
+  input(type='button',id='shots_3',value='3',class='shots')
+  input(type='button',id='shots_4',value='4',class='shots bogey')
+
+p
+  a(href='/courses') Back to course list

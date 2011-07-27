@@ -1,0 +1,3 @@
+h2= course.name
+
+form(action='/courses/'+course._id.toHexString()+'/scores', method='POST')!= partial('partials/score_form',{locals:{hole:hole}})
