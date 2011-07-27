@@ -31,21 +31,24 @@ app.configure ->
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 
-# Make session & flash accessible in the views
+# Make session accessible in the views
 app.dynamicHelpers
     session: (req,res) ->
         return req.session
-    flash: (req,res) ->
-        return req.flash()
 
-# Root handler
+# Root handler redirects to course list
 app.get '/', (req,res) ->
     res.redirect('/courses')
-
 
 # Handlers for login/logout
 require('./modules/sessions').setup app
 
+# Disallow non-iphone/ipod
+app.get /\/.*/, (req,res,next) ->
+    if req.headers['user-agent'].match /(iPhone|iPod)/
+        next()
+        return
+    res.render 'mobile_only'
 
 # Access control for /courses - require login to add/edit
 publicCourseRoutes = [
@@ -71,6 +74,7 @@ courses = app.resource 'courses', require('./modules/courses')
 scores = app.resource 'scores', require('./modules/scores')
 courses.add scores
 
+# Actually start the server
 app.listen(port)
 
 # Starting a new round removes saved scores for the course

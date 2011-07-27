@@ -7,11 +7,9 @@ html
     title flipfling
   body
     #main
-      - if (flash.warn)
-        p#warn= flash.warn
       #container!= body
       #footer
-        - if(session.user)
+        - if(session && session.user)
           #user= 'logged in as ' + session.user.login
           #logout
             a(href='/sessions/destroy') logout
