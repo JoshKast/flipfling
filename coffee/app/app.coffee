@@ -10,7 +10,7 @@ require 'express-resource'
 
 # Open DB connection defined in config
 mongoose = require 'mongoose'
-mongoose.connect require('./config/mongodb').conn_str()
+mongoose.connect require('./conf/mongodb').conn_str()
 
 require './models/scores'
 Score = mongoose.model 'Score'
