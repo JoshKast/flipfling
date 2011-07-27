@@ -1,4 +1,4 @@
-Mobile webapp for tracking disc golf scores
+Mobile webapp for tracking [disc golf](http://www.pdga.com) scores
 
 Made with CoffeeScript + Nodejs + MongoDB, as an experiment to test express-resource and mongoose node modules
 
